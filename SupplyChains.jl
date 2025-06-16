@@ -7,11 +7,12 @@ using Distributions
 using ProgressMeter
 
 ##### DATA TYPE #####
+# This represents a directed multiplex network, where the nodes may also have types. Sorry for the poor choice of name.
 struct SupplyChain
-    G::Array{SimpleDiGraph{Int64}, 1}
-    N_industries::Int64
-    N_vertices::Int64
-    industry::Array{Int64, 1}           # type of node
+    G::Array{SimpleDiGraph{Int64}, 1}   # array of graphs, one for each layer
+    N_industries::Int64                 # number of layers
+    N_vertices::Int64                   # number of nodes
+    industry::Array{Int64, 1}           # type of each node
 end
 
 ##### HELPER FUNCTIONS #####
