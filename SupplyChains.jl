@@ -1,5 +1,5 @@
 module SupplyChains
-export SupplyChain, sc_constrained_poisson
+export SupplyChain, sc_constrained_poisson, random_configuration_model_directed
 
 using Graphs
 using Random
